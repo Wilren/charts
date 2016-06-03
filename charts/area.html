@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>地区统计</title>
+    <link rel="stylesheet" href="/script/components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/script/components/Font-Awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/script/components/layer/skin/layer.css">
+    <link rel="stylesheet/less" href="/style/style.less" />
+    <script src="/script/components/reserveLoadjs/reserveLoad.js"></script>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="areaChart">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    reserveLoad(
+        '/script/components/jquery/dist/jquery.min.js',
+        '/script/components/moment/min/moment.min.js',
+        '/script/components/underscore/underscore-min.js',
+        '/script/components/bootstrap/dist/js/bootstrap.min.js',
+        '/script/components/bootstrap/dist/js/bootstrap.min.js',
+        '/script/components/layer/layer.js',
+
+        '/script/components/less/dist/less.js',
+        '/script/components/echarts/dist/echarts.min.js',
+
+
+        '/script/components/echarts/map/js/china.js',
+        '/script/components/echarts/map/js/china-contour.js',
+        '/script/components/echarts/map/js/province/guangdong.js',
+        '/script/components/echarts/map/js/province/jiangmen.js',
+        '/script/components/echarts/theme/dark.js',
+
+        '/charts/area.js',
+        function(errUrl) {
+            if (errUrl) {
+                alert('Error loading: ' + errUrl);
+            }
+        });
+    </script>
+</body>
+
+</html>

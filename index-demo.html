@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Echarts</title>
+    <link rel="stylesheet" href="/script/components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/style/black.css">
+    <script src="script/components/reserveLoadjs/reserveLoad.js"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-filled">
+                    <div class="panel-heading">Filled basic panel</div>
+                    <div class="panel-body">
+                        <div id="oneChart" style="height:400px;"></div>
+                    </div>
+                    <div class="panel-footer">Panel footer</div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="twoChart" style="height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="threeChart" style="height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="fourChart" style="height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="fiveChart" style="height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="sixChart" style="height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="sevenChart" style="height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="eightChart" style="height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="nineChart" style="height:400px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="tenChart" style="height:600px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <button id="btnElevenGD" class="btn btn-default" style="z-index: 999; position: absolute; left: 45px; top: 25px;">显示广东</button>
+                        <div id="elevenChart" style="height:600px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="twelveChart" style="height:600px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-filled">
+                    <div class="panel-body">
+                        <div id="tgChart" style="height:600px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script>
+    reserveLoad(
+        '/script/components/jquery/dist/jquery.min.js',
+        '/script/components/moment/min/moment.min.js',
+        '/script/components/underscore/underscore-min.js',
+        '/script/components/bootstrap/dist/js/bootstrap.min.js',
+        '/script/components/echarts/dist/echarts.min.js',
+        // '/script/components/echarts/dist/extension/bmap.min.js',
+        // '/script/components/echarts/dist/extension/dataTool.min.js',
+
+
+        '/script/components/echarts/map/js/china.js',
+        '/script/components/echarts/map/js/china-contour.js',
+        '/script/components/echarts/map/js/province/guangdong.js',
+        '/script/components/echarts/map/js/province/jiangmen.js',
+        '/script/components/echarts/theme/dark.js',
+        '/script/app.js',
+        function(errUrl) {
+            if (errUrl) {
+                alert('Error loading: ' + errUrl);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+li {
+    list-style: none;
+}
+
+a {
+    color: @text-color;
+}
+
+a:hover {
+    color: @text-color;
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}

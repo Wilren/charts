@@ -1,0 +1,50 @@
+body{
+	/*background-image: url('/images/bg.jpg');*/
+	background-repeat:no-repeat;
+	-webkit-background-size: 100%;
+	background-size: 100%;
+	-webkit-transition: all 3s ease;
+	-o-transition: all 3s ease;
+	transition: all 3s ease;
+}
+
+body:hover{
+	background-size: 100%;
+}
+
+/***************************************************************/
+/*** Navigation
+/***************************************************************/
+
+.navigation{
+	width:750px;
+	position: fixed;
+	top: 10px;
+}
+.navigation .navi{
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+.navigation .navi li{
+	display:inline-block;
+	float:left;
+	width:20%;
+	text-align:center;
+	padding:0px;
+	margin:0px;
+}
+
+
+
+
+
+
+/***************************************************************/
+/*** left_chart_wrapper
+/***************************************************************/
+.left_chart_wrapper{
+	position: fixed;
+	top: 150px;
+}
+
