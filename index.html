@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>数据统计平台</title>
     <link rel="stylesheet" href="/script/components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/script/components/Font-Awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/script/components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/script/components/layer/skin/layer.css">
     <link rel="stylesheet" href="/script/components/onepagescroll/css/onepage-scroll.css">
     <link rel="stylesheet/less" href="/style/style.less" />
+    <link rel="stylesheet/less" href="/style/responsive.less" />
     <script src="/script/components/reserveLoadjs/reserveLoad.js"></script>
 </head>
 
@@ -25,92 +26,211 @@
     </section>
     <div class="main">
         <div id="JobModule" class="main-section">
+            <section class="section-title">全市就业情况分析</section>
             <section class="left_chart_wrapper">
                 <div class="container left-container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="panel panel-subject">
-                                <div class="panel-body">
-                                    <h3>未就业人员情况</h3>
-                                </div>
+                    <div class="panel-group" id="accordionJob" role="tablist" aria-multiselectable="true">
+                        <div id="subject_unemployed" class="panel panel-subject" data-subject="unemployed">
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionJob" href="#collapseUnemployed">
+                                <h3 class="panel-title">未就业人员情况</h3>
                             </div>
                         </div>
-                        <div class="col-sm-12">
-                            <div class="panel panel-subject">
-                                <div class="panel-body">
-                                    <h3>企业分布情况</h3>
-                                </div>
+                        <div class="panel-collapse collapse in" id="collapseUnemployed">
+                            <ul class="list-totals">
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="subject_unit" class="panel panel-subject" data-subject="unit">
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionJob" href="#collapseUnit">
+                                <h3 class="panel-title">企业分布情况</h3>
                             </div>
                         </div>
-                        <div class="col-sm-12">
-                            <div class="panel panel-subject">
-                                <div class="panel-body">
-                                    <h3>招聘岗位情况</h3>
-                                </div>
+                        <div class="panel-collapse collapse" id="collapseUnit">
+                            <ul class="list-totals">
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="subject_recruitment" class="panel panel-subject" data-subject="recruitment">
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionJob" href="#collapseRecruitment">
+                                <h3 class="panel-title">招聘岗位情况</h3>
                             </div>
                         </div>
-                        <div class="col-sm-12">
-                            <div class="panel panel-subject">
-                                <div class="panel-body">
-                                    <h3>供需缺口比例情况</h3>
-                                </div>
+                        <div class="panel-collapse collapse" id="collapseRecruitment">
+                            <ul class="list-totals">
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="subject_offerratio" class="panel panel-subject" data-subject="offerratio">
+                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionJob" href="#collapseOfferratio">
+                                <h3 class="panel-title">供需缺口比例情况</h3>
                             </div>
+                        </div>
+                        <div class="panel-collapse collapse" id="collapseOfferratio">
+                            <ul class="list-totals">
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="totals-item">
+                                    <div class="content">
+                                        <div class="title">全市补贴受理人员</div>
+                                        <div>
+                                            <span class="value">15242</span>
+                                            <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="right_chart_wrapper">
                 <div class="container right-container">
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="panel panel-total">
-                                <div id="job_areaChart">
-                                </div>
+                    <div class="panel panel-total">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">市用工需求情况分析</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="job_areaChart">
                             </div>
                         </div>
-                        <div class="col-sm-12">
-                            <div class="panel panel-total">
-                                <div id="job_barChart">
-                                </div>
+                    </div>
+                    <div class="panel panel-total">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">市用工需求情况分析</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div id="job_barChart">
                             </div>
                         </div>
-                        <div class="col-sm-12">
-                            <div class="panel panel-total">
-                                <div class="panel-title">
-                                    <h4>重点行业需求排名</h4>
-                                </div>
-                                <div class="panel-body">
-                                    <table class="table" style="width:450px">
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>机械摩配及装备制造业</td>
-                                                <td>1 : 0.92</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>家电电器制造业</td>
-                                                <td>1 : 0.75</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>五金不锈钢制造业</td>
-                                                <td>1 : 0.53</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">4</th>
-                                                <td>绿色（半导体）光源产业</td>
-                                                <td>1 : 0.22</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">5</th>
-                                                <td>信息电子产业</td>
-                                                <td>1 : 0.11</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="panel panel-total">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">重点行业需求排名</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table" style="width:500px">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>机械摩配及装备制造业</td>
+                                        <td>1 : 0.92</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>家电电器制造业</td>
+                                        <td>1 : 0.75</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>五金不锈钢制造业</td>
+                                        <td>1 : 0.53</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>绿色（半导体）光源产业</td>
+                                        <td>1 : 0.22</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">5</th>
+                                        <td>信息电子产业</td>
+                                        <td>1 : 0.11</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/script/components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/script/components/Font-Awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/script/components/layer/skin/layer.css">
+    <link rel="stylesheet" href="/script/components/onepagescroll/css/onepage-scroll.css">
     <link rel="stylesheet/less" href="/style/style.less" />
     <script src="/script/components/reserveLoadjs/reserveLoad.js"></script>
 </head>
@@ -22,107 +23,103 @@
             <li><a href="#five" data-toggle="tab"><i class="fa fa-download"></i><span></span></a></li>
         </ul>
     </section>
-    <div id="JobModule" class="main-section">
-        <section class="left_chart_wrapper">
-            <div class="container left-container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div id="subject_unemployed" class="panel panel-subject" data-subject="unemployed">
-                            <div class="panel-body">
-                                <h3>未就业人员情况</h3>
+    <div class="main">
+        <div id="JobModule" class="main-section">
+            <section class="left_chart_wrapper">
+                <div class="container left-container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div id="subject_unemployed" class="panel panel-subject" data-subject="unemployed">
+                                <div class="panel-body">
+                                    <h3>未就业人员情况</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div id="subject_unit" class="panel panel-subject" data-subject="unit">
-                            <div class="panel-body">
-                                <h3>企业分布情况</h3>
+                        <div class="col-sm-12">
+                            <div id="subject_unit" class="panel panel-subject" data-subject="unit">
+                                <div class="panel-body">
+                                    <h3>企业分布情况</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div id="subject_recruitment" class="panel panel-subject" data-subject="recruitment">
-                            <div class="panel-body">
-                                <h3>招聘岗位情况</h3>
+                        <div class="col-sm-12">
+                            <div id="subject_recruitment" class="panel panel-subject" data-subject="recruitment">
+                                <div class="panel-body">
+                                    <h3>招聘岗位情况</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div id="subject_offerratio" class="panel panel-subject" data-subject="offerratio">
-                            <div class="panel-body">
-                                <h3>供需缺口比例情况</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="right_chart_wrapper">
-            <div class="container right-container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="panel panel-total">
-                        	<div id="job_areaChart">
-                        		
-                        	</div>
-
-
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="panel panel-total">
-                            <div id="job_barChart">
-                        		
-                        	</div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12">
-                        <div class="panel panel-total">
-                            <div class="panel-title">
-                                <h4>重点行业需求排名</h4>
-                            </div>
-                            <div class="panel-body">
-                                <table class="table" style="width:450px">
-                                    <tbody>
-                                        <tr>
-                                            <th scope="row">1</th>
-                                            <td>机械摩配及装备制造业</td>
-                                            <td>1 : 0.92</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">2</th>
-                                            <td>家电电器制造业</td>
-                                            <td>1 : 0.75</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">3</th>
-                                            <td>五金不锈钢制造业</td>
-                                            <td>1 : 0.53</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">4</th>
-                                            <td>绿色（半导体）光源产业</td>
-                                            <td>1 : 0.22</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row">5</th>
-                                            <td>信息电子产业</td>
-                                            <td>1 : 0.11</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="col-sm-12">
+                            <div id="subject_offerratio" class="panel panel-subject" data-subject="offerratio">
+                                <div class="panel-body">
+                                    <h3>供需缺口比例情况</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <section class="section-main">
-        	<div id="job_mainChart" style="height: 100%;width: 100%;">
-        		
-        	</div>
-        </section>
+            </section>
+            <section class="right_chart_wrapper">
+                <div class="container right-container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="panel panel-total">
+                                <div id="job_areaChart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-total">
+                                <div id="job_barChart">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="panel panel-total">
+                                <div class="panel-title">
+                                    <h4>重点行业需求排名</h4>
+                                </div>
+                                <div class="panel-body">
+                                    <table class="table" style="width:450px">
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>机械摩配及装备制造业</td>
+                                                <td>1 : 0.92</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2</th>
+                                                <td>家电电器制造业</td>
+                                                <td>1 : 0.75</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">3</th>
+                                                <td>五金不锈钢制造业</td>
+                                                <td>1 : 0.53</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">4</th>
+                                                <td>绿色（半导体）光源产业</td>
+                                                <td>1 : 0.22</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">5</th>
+                                                <td>信息电子产业</td>
+                                                <td>1 : 0.11</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-main">
+                <div id="job_mainChart" style="height: 100%;width: 100%;">
+                </div>
+            </section>
+        </div>
     </div>
     <script>
     reserveLoad(
@@ -131,6 +128,7 @@
         '/script/components/underscore/underscore-min.js',
         '/script/components/bootstrap/dist/js/bootstrap.min.js',
         '/script/components/bootstrap/dist/js/bootstrap.min.js',
+        '/script/components/onepagescroll/js/jquery.onepage-scroll.min.js',
         '/script/components/layer/layer.js',
 
         '/script/components/less/dist/less.js',
@@ -145,7 +143,7 @@
         '/script/components/echarts/map/js/province/jiangmen.js',
         '/script/components/echarts/theme/dark.js',
 
-
+        '/script/main.js',
         '/script/app-job.js',
         function(errUrl) {
             if (errUrl) {

@@ -32,8 +32,42 @@ var jobModule = {
         $('#JobModule .panel-subject').click(function() {
             $('#JobModule .panel-subject').removeClass('active');
             $(this).addClass('active');
+            $('.panel-collapse').collapse('hide');
 
             self.mainChart.loadData();
+        });
+
+        $(document).keydown(function(e) {
+            var curIdx = $('#JobModule .panel-subject').index($('.panel-subject.active'));
+            var length = $('#JobModule .panel-subject').length;
+
+            
+            var tag = e.target.tagName.toLowerCase();
+            switch (e.which) {
+                case 38:
+                    var index = (curIdx - 1) % 4;
+                    $('#JobModule .panel-subject').removeClass('active');
+                    $('.panel-collapse').collapse('hide');
+                    $('#JobModule .panel-subject').eq(index).addClass('active');
+                    $('#JobModule .panel-collapse').eq(index).collapse('show');
+
+                    jobModule.refresh();
+                    break;
+                case 40:
+                    var index = (curIdx + 1) % 4;
+                    $('#JobModule .panel-subject').removeClass('active');
+                    $('.panel-collapse').collapse('hide');
+                    $('#JobModule .panel-subject').eq(index).addClass('active');
+                    $('#JobModule .panel-collapse').eq(index).collapse('show');
+
+                    jobModule.refresh();
+                    break;
+                default:
+                    return;
+            }
+
+
+
         });
 
 
@@ -42,6 +76,13 @@ var jobModule = {
         self.barChart.init();
 
     },
+    refresh : function(){
+        var self = this;
+        self.mainChart.init();
+        self.areaChart.init();
+        self.barChart.init();
+    },
+
 
     /**
      * 地图图表，显示在平台中间
@@ -92,11 +133,17 @@ var jobModule = {
             };
             // 使用刚指定的配置项和数据显示图表。
             self.chart.setOption(option);
-
             self.options.mapName = '江门市';
 
+
+
+            var index = $('#JobModule .panel-subject').index($('.panel-subject.active'));
+            if (index == -1) {
+                $('#JobModule .panel-subject').eq(0).addClass('active');
+            }
+
             //显示数据
-            // self.loadData();
+            self.loadData();
 
 
             self.chart.on('geoselectchanged', function(param) {
@@ -503,7 +550,7 @@ var jobModule = {
                     },
                     series: [{
                         name: 'pm2.5',
-                        type: 'scatter',
+                        type: 'heatmap',
                         coordinateSystem: 'geo',
                         itemStyle: {
                             normal: {
@@ -524,7 +571,7 @@ var jobModule = {
                         data: convertData([
                             { name: '蓬江区', value: 1500 },
                             { name: '江海区', value: 2500 },
-                            { name: '台山市', value: 400 },
+                            { name: '台山市', value: 9400 },
                             { name: '恩平市', value: 600 },
                             { name: '开平市', value: 800 },
                             { name: '鹤山市', value: 400 },
@@ -633,7 +680,7 @@ var jobModule = {
         },
         resize: function() {
             var self = this;
-            var height = $(window).height() / 3;
+            var height = $('#job_areaChart').parent('.panel-body').height();
             $('#job_areaChart').height(height);
             self.chart.resize();
         }

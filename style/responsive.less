@@ -1,67 +1,8 @@
 // Core variables and mixins
 @import "variables.less";
 @import "base.less";
-body {
-    font-family: @font-family-base;
-    font-size: @font-size-base;
-    color: @text-color;
-    background-color: @body-bg;
-    line-height: @line-height-base;
-}
+@media (max-width: @screen-lg) {
 
-body {
-    /*background-image: url('/images/bg1.jpg');*/
-    background-repeat: no-repeat;
-}
-
-
-/*
-body:hover {
-    background-size: 150%;
-}
-*/
-
-
-/*************************************************************************
-Navigation
-*************************************************************************/
-
-.navigation {
-    position: fixed;
-    bottom: 0;
-    left: 30%;
-    z-index: 1000;
-    .navi {
-        list-style-type: none;
-        float: left;
-        padding: 0;
-        margin: 0;
-    }
-    .navi li {
-        float: left;
-        a {
-            display: block;
-            font-size: 20px;
-            text-align: center;
-            width: 60px;
-            height: 60px;
-            line-height: 60px;
-            color: @text-color;
-            .transition(0.2s);
-            &:hover {
-                font-size: 25px;
-            }
-        }
-    }
-}
-
-/*************************************************************************
-section-title
-*************************************************************************/
-.section-title{
-    margin: 30px 0 0 30px;
-    font-size: 36px;
-}
 
 
 /*************************************************************************
@@ -75,13 +16,12 @@ left_chart_wrapper
     left: 25px;
 }
 
-.left-container {
-    width: 320px;
+.left-container { 
+    width: 220px;
     display: block;
     padding: 0;
     margin: 0;
 }
-
 
 /*************************************************************************
 Panel
@@ -119,18 +59,18 @@ Panel
         padding: 0;
         background: url("/images/line-1.gif") no-repeat scroll left bottom rgba(0, 0, 0, 0);
 
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
     .panel-title{
         font-size: 24px;
-        line-height: 40px;
-        padding: 0px 0 20px 30px;
+        line-height: 30px;
+        padding: 0px 0 10px 10px;
     }
 }
 
 .list-totals {
     padding: 0;
-    margin: 10px 0 10px 30px;
+    margin: 10px 0 10px 10px;
 }
 
 .totals-item {
@@ -143,13 +83,13 @@ Panel
         color: #637fb7;
     }
     .value{
-        font-size: 48px;
-        line-height: 50px;
+        font-size: 28px;
+        line-height: 30px;
         color: @white;
     }
     .compare{
         float: right;
-        margin-top: 20px;
+        margin-top: 10px;
         font-size: 18px;
         margin-right: 20px;
         .fa{
@@ -181,7 +121,7 @@ right_chart_wrapper
 }
 
 .right-container {
-    width: 560px;
+    width: 360px;
     display: block;
     padding: 0;
     margin: 0;
@@ -189,7 +129,7 @@ right_chart_wrapper
 
 .panel-total{
     width: 100%;
-    min-height: 330px;
+    min-height: 230px;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #cdcecf;
@@ -208,29 +148,12 @@ right_chart_wrapper
         padding: 0;
         margin: 0;
         width: 100%;
-        height: 280px;
+        height: 180px;
     }
 }
 
 
-/*************************************************************************
-section-map
-*************************************************************************/
-
-.section-map {
-    width: 100%;
-    height: 100%;
-}
 
 
-/*************************************************************************
-ECharts
-*************************************************************************/
 
-#areaChart {
-    height: 350px;
-}
-
-#barChart {
-    height: 400px;
 }
