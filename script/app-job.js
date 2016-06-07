@@ -778,7 +778,7 @@ var jobModule = {
         },
         resize: function() {
             var self = this;
-            var height = $(window).height() / 3;
+            var height = $('#job_barChart').parent('.panel-body').height();
             $('#job_barChart').height(height);
             self.chart.resize();
         }
