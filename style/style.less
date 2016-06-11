@@ -102,7 +102,7 @@ Panel
     .panel-left {
         float: left;
     }
-    .panel-right {
+    .panel-right { 
         float: right;
     }
     .panel-left, .panel-right {
@@ -112,12 +112,12 @@ Panel
 
 .panel-subject {
     cursor: pointer;
-    .transition(1s);
+    .transition(1s);   
     &.active, &:hover {
     }
     .panel-heading{
         padding: 0;
-        background: url("/images/line-1.gif") no-repeat scroll left bottom rgba(0, 0, 0, 0);
+        background: url("/charts/images/line-1.gif") no-repeat scroll left bottom rgba(0, 0, 0, 0);
 
         margin-bottom: 40px;
     }
@@ -128,13 +128,55 @@ Panel
     }
 }
 
+
+
+.panel-subject .collapsing {
+
+}
+.panel-subject li{
+        -webkit-transition: all 1600ms ease;
+           -moz-transition: all 1600ms ease;
+            -ms-transition: all 1600ms ease;
+             -o-transition: all 1600ms ease;
+                transition: all 1600ms ease;
+
+        -webkit-transform-origin: 100% 50%;
+           -moz-transform-origin: 100% 50%;
+            -ms-transform-origin: 100% 50%;
+             -o-transform-origin: 100% 50%;
+                transform-origin: 100% 50%;
+}
+.panel-subject .collapsing li{
+            -webkit-transform: translate3d( 0, -50px, -100px ) rotateX( -90deg );
+               -moz-transform: translate3d( 0, -50px, -100px ) rotateX( -90deg );
+                -ms-transform: translate3d( 0, -50px, -100px ) rotateX( -90deg );
+                 -o-transform: translate3d( 0, -50px, -100px ) rotateX( -90deg );
+                    transform: translate3d( 0, -50px, -100px ) rotateX( -90deg );
+
+}
+
+
+.collapse-total{
+    display: none;
+}
+
+
 .list-totals {
     padding: 0;
     margin: 10px 0 10px 30px;
+
+}
+
+.showed{
+    display:block !important;
+    li{
+    }
 }
 
 .totals-item {
     height: 110px;
+
+
     .content {
     }
     .title{

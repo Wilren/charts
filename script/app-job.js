@@ -32,9 +32,14 @@ var jobModule = {
         $('#JobModule .panel-subject').click(function() {
             $('#JobModule .panel-subject').removeClass('active');
             $(this).addClass('active');
-            $('.panel-collapse').collapse('hide');
 
-            self.mainChart.loadData();
+
+            $('#JobModule .collapse-total').removeClass('showed');
+            $(this).next('.collapse-total').addClass('showed');
+
+            setTimeout(function(){
+                jobModule.refresh();
+            },500);
         });
 
         $(document).keydown(function(e) {
@@ -47,20 +52,15 @@ var jobModule = {
                 case 38:
                     var index = (curIdx - 1) % 4;
                     $('#JobModule .panel-subject').removeClass('active');
-                    $('.panel-collapse').collapse('hide');
                     $('#JobModule .panel-subject').eq(index).addClass('active');
-                    $('#JobModule .panel-collapse').eq(index).collapse('show');
 
-                    jobModule.refresh();
+                    $('#JobModule .panel-subject').eq(index).click();
                     break;
                 case 40:
                     var index = (curIdx + 1) % 4;
                     $('#JobModule .panel-subject').removeClass('active');
-                    $('.panel-collapse').collapse('hide');
                     $('#JobModule .panel-subject').eq(index).addClass('active');
-                    $('#JobModule .panel-collapse').eq(index).collapse('show');
-
-                    jobModule.refresh();
+                    $('#JobModule .panel-subject').eq(index).click();
                     break;
                 default:
                     return;
@@ -214,7 +214,7 @@ var jobModule = {
         },
         loadData: function() {
             var self = this;
-            self.chart.showLoading();
+            // self.chart.showLoading();
             var param = this.getParam();
             var option = {};
 
