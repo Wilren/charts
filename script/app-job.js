@@ -29,17 +29,28 @@ var geoCoordMap = {
 var jobModule = {
     init: function() {
         var self = this;
+
+
         $('#JobModule .panel-subject').click(function() {
             $('#JobModule .panel-subject').removeClass('active');
             $(this).addClass('active');
 
 
-            $('#JobModule .collapse-total').removeClass('showed');
-            $(this).next('.collapse-total').addClass('showed');
+            $('#JobModule .collapse').removeClass('showed');
+            $(this).find('.collapse').addClass('showed');
+            $(this).find('.value').html('');
+            $(this).find('.compare').css('opacity', '0');
+            
+
+            setTimeout(function(){
+                $('#JobModule .collapse.showed').find('.value').countTo({onComplete:function(item,value){
+                    $(this).next().show().css('opacity', '1');
+                }});
+            },600);
 
             setTimeout(function(){
                 jobModule.refresh();
-            },500);
+            },900);
         });
 
         $(document).keydown(function(e) {
@@ -50,14 +61,14 @@ var jobModule = {
             var tag = e.target.tagName.toLowerCase();
             switch (e.which) {
                 case 38:
-                    var index = (curIdx - 1) % 4;
+                    var index = (curIdx - 1) % length;
                     $('#JobModule .panel-subject').removeClass('active');
                     $('#JobModule .panel-subject').eq(index).addClass('active');
 
                     $('#JobModule .panel-subject').eq(index).click();
                     break;
                 case 40:
-                    var index = (curIdx + 1) % 4;
+                    var index = (curIdx + 1) % length;
                     $('#JobModule .panel-subject').removeClass('active');
                     $('#JobModule .panel-subject').eq(index).addClass('active');
                     $('#JobModule .panel-subject').eq(index).click();
@@ -70,18 +81,29 @@ var jobModule = {
 
         });
 
-
-        self.mainChart.init();
-        self.areaChart.init();
-        self.barChart.init();
+        self.leftChart.init();
+        // self.mainChart.init();
+        // self.areaChart.init();
+        // self.barChart.init();
 
     },
     refresh : function(){
         var self = this;
-        self.mainChart.init();
-        self.areaChart.init();
-        self.barChart.init();
+
+
+        setTimeout(function(){
+                self.mainChart.init();
+                self.areaChart.init();
+                self.barChart.init();
+            },2000);        
     },
+    leftChart : {
+        init:function(){
+            $('#JobModule .panel-subject').eq(0).click();
+        }
+    },
+
+
 
 
     /**

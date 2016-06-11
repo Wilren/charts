@@ -10,8 +10,9 @@ body {
 }
 
 body {
-    /*background-image: url('/images/bg1.jpg');*/
+    background-image: url('../images/bg1.jpg');
     background-repeat: no-repeat;
+    .transition(1s);   
 }
 
 
@@ -51,6 +52,10 @@ Navigation
             &:hover {
                 font-size: 25px;
             }
+        }
+
+        &.active a{
+            color: #000;
         }
     }
 }
@@ -134,11 +139,11 @@ Panel
 
 }
 .panel-subject li{
-        -webkit-transition: all 1600ms ease;
-           -moz-transition: all 1600ms ease;
-            -ms-transition: all 1600ms ease;
-             -o-transition: all 1600ms ease;
-                transition: all 1600ms ease;
+        -webkit-transition: all 800ms ease;
+           -moz-transition: all 800ms ease;
+            -ms-transition: all 800ms ease;
+             -o-transition: all 800ms ease;
+                transition: all 800ms ease;
 
         -webkit-transform-origin: 100% 50%;
            -moz-transform-origin: 100% 50%;
@@ -167,10 +172,9 @@ Panel
 
 }
 
+
 .showed{
-    display:block !important;
-    li{
-    }
+
 }
 
 .totals-item {
@@ -194,6 +198,8 @@ Panel
         margin-top: 20px;
         font-size: 18px;
         margin-right: 20px;
+        opacity: 0;
+        .transition(0.5s);
         .fa{
             padding: 0 10px;
         }

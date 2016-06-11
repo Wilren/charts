@@ -14,17 +14,13 @@
 </head>
 
 <body>
-
-
-
-    <section class="navigation">
+    <section id="mainNav" class="navigation">
         <!-- Nav tabs -->
         <ul class="navi">
-            <li class="active"><a href="#one" data-toggle="tab"><i class="fa fa-desktop"></i><span></span></a></li>
-            <li><a href="#two" data-toggle="tab"><i class="fa fa-user"></i><span></span></a></li>
-            <li><a href="#three" data-toggle="tab"><i class="fa fa-comments"></i><span></span></a></li>
-            <li><a href="#four" data-toggle="tab"><i class="fa fa-cogs"></i><span></span></a></li>
-            <li><a href="#five" data-toggle="tab"><i class="fa fa-download"></i><span></span></a></li>
+            <li class="active"  data-index="1"><a href="#one" data-toggle="tab"><i class="fa fa-desktop"></i><span></span></a></li>
+            <li data-index="2"><a href="#two" data-toggle="tab"><i class="fa fa-user"></i><span></span></a></li>
+            <li data-index="3"><a href="#three" data-toggle="tab"><i class="fa fa-comments"></i><span></span></a></li>
+            <li data-index="4"><a href="#four" data-toggle="tab"><i class="fa fa-cogs"></i><span></span></a></li>
         </ul>
     </section>
     <div class="main">
@@ -33,17 +29,17 @@
             <section class="left_chart_wrapper">
                 <div class="container left-container">
                     <div class="panel-group" id="accordionJob" role="tablist" aria-multiselectable="true">
-                        <div id="subject_unemployed" class="panel panel-subject collapsed" data-subject="unemployed" data-toggle="collapse" data-target="#collapse_unemployed" aria-expanded="true" data-parent="#accordionJob" >
+                        <div id="subject_unemployed" class="panel panel-subject" data-subject="unemployed" data-toggle="collapse" data-target="#collapse_unemployed" aria-expanded="false" data-parent="#accordionJob" >
                             <div class="panel-heading">
                                 <h3 class="panel-title">未就业人员情况</h3>
                             </div>
-                            <div id="collapse_unemployed" class="collapse in"  aria-expanded="true">
+                            <div id="collapse_unemployed" class="collapse"  aria-expanded="false">
                                 <ul class="list-totals">
                                     <li class="totals-item">
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="900" data-to="54354">0</span>
                                                 <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
                                             </div>
                                         </div>
@@ -52,7 +48,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="1200" data-to="543256"></span>
                                                 <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
                                             </div>
                                         </div>
@@ -61,7 +57,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="1500" data-to="54363"></span>
                                                 <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
                                             </div>
                                         </div>
@@ -79,7 +75,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="900" data-to="123425"></span>
                                                 <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
                                             </div>
                                         </div>
@@ -88,7 +84,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="1200" data-to="6544"></span>
                                                 <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
                                             </div>
                                         </div>
@@ -97,7 +93,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="1500" data-to="131445"></span>
                                                 <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
                                             </div>
                                         </div>
@@ -115,7 +111,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="600" data-to="6544"></span>
                                                 <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
                                             </div>
                                         </div>
@@ -124,7 +120,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="900" data-to="1235"></span>
                                                 <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
                                             </div>
                                         </div>
@@ -133,7 +129,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="1500" data-to="65431"></span>
                                                 <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
                                             </div>
                                         </div>
@@ -151,7 +147,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="900" data-to="123456"></span>
                                                 <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
                                             </div>
                                         </div>
@@ -160,7 +156,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="1200" data-to="543221"></span>
                                                 <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
                                             </div>
                                         </div>
@@ -169,7 +165,7 @@
                                         <div class="content">
                                             <div class="title">全市补贴受理人员</div>
                                             <div>
-                                                <span class="value">15242</span>
+                                                <span class="value timer" data-speed="1500" data-to="3456"></span>
                                                 <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
                                             </div>
                                         </div>
@@ -332,6 +328,13 @@
                 </div>
             </section>
         </div>
+
+        <div id="HospitalModule" class="main-section">
+        </div>
+        <div id="RecruitmentModule" class="main-section">
+        </div>
+
+
     </div>
     <script>
     reserveLoad(
@@ -342,6 +345,7 @@
         '/charts/script/components/bootstrap/dist/js/bootstrap.min.js',
         '/charts/script/components/onepagescroll/js/jquery.onepage-scroll.js',
         '/charts/script/components/layer/layer.js',
+        '/charts/script/components/countTo/countTo.js',
 
         '/charts/script/components/less/dist/less.js',
         '/charts/script/components/echarts/dist/echarts.min.js',
