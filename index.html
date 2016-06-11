@@ -4,16 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <title>数据统计平台</title>
-    <link rel="stylesheet" href="/script/components/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/script/components/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/script/components/layer/skin/layer.css">
-    <link rel="stylesheet" href="/script/components/onepagescroll/css/onepage-scroll.css">
-    <link rel="stylesheet/less" href="/style/style.less" />
-    <link rel="stylesheet/less" href="/style/responsive.less" />
-    <script src="/script/components/reserveLoadjs/reserveLoad.js"></script>
+    <link rel="stylesheet" href="/charts/script/components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/charts/script/components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/charts/script/components/layer/skin/layer.css">
+    <link rel="stylesheet" href="/charts/script/components/onepagescroll/css/onepage-scroll.css">
+    <link rel="stylesheet/less" href="/charts/style/style.less" />
+    <link rel="stylesheet/less" href="/charts/style/responsive.less" />
+    <script src="/charts/script/components/reserveLoadjs/reserveLoad.js"></script>
 </head>
 
 <body>
+
+
+
     <section class="navigation">
         <!-- Nav tabs -->
         <ul class="navi">
@@ -30,149 +33,149 @@
             <section class="left_chart_wrapper">
                 <div class="container left-container">
                     <div class="panel-group" id="accordionJob" role="tablist" aria-multiselectable="true">
-                        <div id="subject_unemployed" class="panel panel-subject" data-subject="unemployed">
-                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionJob" href="#collapseUnemployed">
+                        <div id="subject_unemployed" class="panel panel-subject collapsed" data-subject="unemployed" data-toggle="collapse" data-target="#collapse_unemployed" aria-expanded="true" data-parent="#accordionJob" >
+                            <div class="panel-heading">
                                 <h3 class="panel-title">未就业人员情况</h3>
                             </div>
+                            <div id="collapse_unemployed" class="collapse in"  aria-expanded="true">
+                                <ul class="list-totals">
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="panel-collapse collapse in" id="collapseUnemployed">
-                            <ul class="list-totals">
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="subject_unit" class="panel panel-subject" data-subject="unit">
-                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionJob" href="#collapseUnit">
+                        <div id="subject_unit" class="panel panel-subject collapsed" data-subject="unit" data-toggle="collapse" data-target="#collapse_unit" aria-expanded="false" data-parent="#accordionJob" >
+                            <div class="panel-heading">
                                 <h3 class="panel-title">企业分布情况</h3>
                             </div>
+                            <div id="collapse_unit" class="collapse"  aria-expanded="false" style="height: 0px;">
+                                <ul class="list-totals">
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="panel-collapse collapse" id="collapseUnit">
-                            <ul class="list-totals">
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="subject_recruitment" class="panel panel-subject" data-subject="recruitment">
-                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionJob" href="#collapseRecruitment">
+                        <div id="subject_recruitment" class="panel panel-subject collapsed" data-subject="recruitment" data-toggle="collapse" data-target="#collapse_recruitment" aria-expanded="false" data-parent="#accordionJob">
+                            <div class="panel-heading">
                                 <h3 class="panel-title">招聘岗位情况</h3>
                             </div>
-                        </div>
-                        <div class="panel-collapse collapse" id="collapseRecruitment">
-                            <ul class="list-totals">
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                            <div id="collapse_recruitment" class="collapse"  aria-expanded="false" style="height: 0px;">
+                                <ul class="list-totals">
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                    </li>
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
+                                    </li>
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="subject_offerratio" class="panel panel-subject" data-subject="offerratio">
-                            <div class="panel-heading" data-toggle="collapse" data-parent="#accordionJob" href="#collapseOfferratio">
-                                <h3 class="panel-title">供需缺口比例情况</h3>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="panel-collapse collapse" id="collapseOfferratio">
-                            <ul class="list-totals">
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                        <div id="subject_offerratio" class="panel panel-subject collapsed" data-subject="offerratio" data-toggle="collapse" data-target="#collapse_offerratio" aria-expanded="false" data-parent="#accordionJob"> 
+                            <div class="panel-heading">
+                                <h3 class="panel-title">供需缺口比例情况</h3>
+                            </div>
+                            <div id="collapse_offerratio" class="collapse"  aria-expanded="false" style="height: 0px;">
+                                <ul class="list-totals">
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                    </li>
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare up"><i class="fa fa-arrow-up"></i>120</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                                <li class="totals-item">
-                                    <div class="content">
-                                        <div class="title">全市补贴受理人员</div>
-                                        <div>
-                                            <span class="value">15242</span>
-                                            <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
+                                    </li>
+                                    <li class="totals-item">
+                                        <div class="content">
+                                            <div class="title">全市补贴受理人员</div>
+                                            <div>
+                                                <span class="value">15242</span>
+                                                <span class="compare down"><i class="fa fa-arrow-down"></i>120</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -332,30 +335,30 @@
     </div>
     <script>
     reserveLoad(
-        '/script/components/jquery/dist/jquery.min.js',
-        '/script/components/moment/min/moment.min.js',
-        '/script/components/underscore/underscore-min.js',
-        '/script/components/bootstrap/dist/js/bootstrap.min.js',
-        '/script/components/bootstrap/dist/js/bootstrap.min.js',
-        '/script/components/onepagescroll/js/jquery.onepage-scroll.js',
-        '/script/components/layer/layer.js',
+        '/charts/script/components/jquery/dist/jquery.min.js',
+        '/charts/script/components/moment/min/moment.min.js',
+        '/charts/script/components/underscore/underscore-min.js',
+        '/charts/script/components/bootstrap/dist/js/bootstrap.min.js',
+        '/charts/script/components/bootstrap/dist/js/bootstrap.min.js',
+        '/charts/script/components/onepagescroll/js/jquery.onepage-scroll.js',
+        '/charts/script/components/layer/layer.js',
 
-        '/script/components/less/dist/less.js',
-        '/script/components/echarts/dist/echarts.min.js',
-        // '/script/components/echarts/dist/extension/bmap.min.js',
-        // '/script/components/echarts/dist/extension/dataTool.min.js',
-
-
-        '/script/components/echarts/map/js/china.js',
-        '/script/components/echarts/map/js/china-contour.js',
-        '/script/components/echarts/map/js/province/guangdong.js',
-        '/script/components/echarts/map/js/province/jiangmen.js',
-        '/script/components/echarts/theme/dark.js',
+        '/charts/script/components/less/dist/less.js',
+        '/charts/script/components/echarts/dist/echarts.min.js',
+        // '/charts/script/components/echarts/dist/extension/bmap.min.js',
+        // '/charts/script/components/echarts/dist/extension/dataTool.min.js',
 
 
-        '/script/main.js',
-        '/script/app-job.js',
-        '/script/app-subsidy.js',
+        '/charts/script/components/echarts/map/js/china.js',
+        '/charts/script/components/echarts/map/js/china-contour.js',
+        '/charts/script/components/echarts/map/js/province/guangdong.js',
+        '/charts/script/components/echarts/map/js/province/jiangmen.js',
+        '/charts/script/components/echarts/theme/dark.js',
+
+
+        '/charts/script/main.js',
+        '/charts/script/app-job.js',
+        '/charts/script/app-subsidy.js',
         function(errUrl) {
             if (errUrl) {
                 alert('Error loading: ' + errUrl);
