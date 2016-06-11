@@ -650,6 +650,7 @@ var jobModule = {
                     }
                 },
                 legend: {
+                    top: '2%',
                     data: ['招聘岗位', '求职岗位']
                 },
                 grid: {
@@ -702,7 +703,7 @@ var jobModule = {
         },
         resize: function() {
             var self = this;
-            var height = $('#job_areaChart').parent('.panel-body').height();
+            var height = $('#job_areaChart').parents('.panel-total').height();
             $('#job_areaChart').height(height);
             self.chart.resize();
         }
@@ -800,7 +801,7 @@ var jobModule = {
         },
         resize: function() {
             var self = this;
-            var height = $('#job_barChart').parent('.panel-body').height();
+            var height = $('#job_barChart').parents('.panel-total').height();
             $('#job_barChart').height(height);
             self.chart.resize();
         }
